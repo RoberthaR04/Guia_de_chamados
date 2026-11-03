@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Nova categoria</title>
+    <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
-    <h1>Nova categoria</h1>
+    <nav>
+        <a href="/chamados">Chamados</a>
+        <a href="/categorias">Categorias</a>
+        <a href="/tecnicos">Técnicos</a>
+    </nav>
+    <main>
+        <h1>Nova categoria</h1>
 
-    <form action="/categorias" method="post">
-        <label>Nome:</label>
-        <input type="text" name="nome">
+        <form action="/categorias" method="post">
+            <label>Nome:</label>
+            <input type="text" name="nome">
 
-        <button type="submit">Salvar</button>
-    </form>
+            <button class="botao" type="submit">Salvar</button>
+        </form>
+    </main>
 </body>
 </html>

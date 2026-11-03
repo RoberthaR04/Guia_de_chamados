@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Técnicos</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/chamados">Chamados</a>
+        <a href="/categorias">Categorias</a>
+        <a href="/tecnicos">Técnicos</a>
+    </nav>
+    <main>
+        <h1>Técnicos cadastrados</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="tecnico : ${tecnicos}">
+                    <td th:text="${tecnico.id}"></td>
+                    <td th:text="${tecnico.nome}"></td>
+                    <td th:text="${tecnico.email}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

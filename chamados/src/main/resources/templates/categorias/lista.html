@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Categorias</title>
+    <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
-    <h1>Categorias cadastradas</h1>
-    <p><a href="/categorias/nova">Nova categoria</a></p>
+    <nav>
+        <a href="/chamados">Chamados</a>
+        <a href="/categorias">Categorias</a>
+        <a href="/tecnicos">Técnicos</a>
+    </nav>
+    <main>
+        <h1>Categorias cadastradas</h1>
+        <a class="botao" href="/categorias/nova">Nova categoria</a>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="categoria : ${categorias}">
-                <td th:text="${categoria.id}"></td>
-                <td th:text="${categoria.nome}"></td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="categoria : ${categorias}">
+                    <td th:text="${categoria.id}"></td>
+                    <td th:text="${categoria.nome}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

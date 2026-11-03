@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Chamados</title>
+    <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
-    <h1>Chamados cadastrados</h1>
-    <p><a href="/chamados/novo">Abrir novo chamado</a></p>
+    <nav>
+        <a href="/chamados">Chamados</a>
+        <a href="/categorias">Categorias</a>
+        <a href="/tecnicos">Técnicos</a>
+    </nav>
+    <main>
+        <h1>Chamados cadastrados</h1>
+        <a class="botao" href="/chamados/novo">Abrir novo chamado</a>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="chamado : ${chamados}">
-                <td th:text="${chamado.id}"></td>
-                <td th:text="${chamado.titulo}"></td>
-                <td th:text="${chamado.status}"></td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="chamado : ${chamados}">
+                    <td th:text="${chamado.id}"></td>
+                    <td th:text="${chamado.titulo}"></td>
+                    <td th:text="${chamado.status}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

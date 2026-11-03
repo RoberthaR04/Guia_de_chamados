@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Novo chamado</title>
+    <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
-    <h1>Novo chamado</h1>
+    <nav>
+        <a href="/chamados">Chamados</a>
+        <a href="/categorias">Categorias</a>
+        <a href="/tecnicos">Técnicos</a>
+    </nav>
+    <main>
+        <h1>Novo chamado</h1>
 
-    <form action="/chamados" method="post">
-        <label>Título:</label>
-        <input type="text" name="titulo">
+        <form action="/chamados" method="post">
+            <label>Título:</label>
+            <input type="text" name="titulo">
 
-        <label>Descrição:</label>
-        <textarea name="descricao"></textarea>
+            <label>Descrição:</label>
+            <textarea name="descricao"></textarea>
 
-        <button type="submit">Salvar</button>
-    </form>
+            <button class="botao" type="submit">Salvar</button>
+        </form>
+    </main>
 </body>
 </html>

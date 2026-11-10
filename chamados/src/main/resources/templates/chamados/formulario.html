@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Novo chamado</title>
     <link rel="stylesheet" href="/css/estilo.css">
 </head>
+
 <body>
     <nav>
         <a href="/chamados">Chamados</a>
@@ -23,6 +25,12 @@
 
             <button class="botao" type="submit">Salvar</button>
         </form>
+        <label>Técnico:</label>
+        <select name="tecnico">
+            <option value="">Selecione...</option>
+            <option th:each="t : ${tecnicos}" th:value="${t.id}" th:text="${t.nome}"></option>
+        </select>
     </main>
 </body>
+
 </html>
